@@ -17,6 +17,7 @@ export default StyleSheet.create({
     marginLeft: 20,
   },
   input: {
+    flex: 1,
     fontFamily: theme.montserratMedium,
     color: '#1A1A1A',
     fontSize: 14,

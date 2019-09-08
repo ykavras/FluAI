@@ -3,7 +3,7 @@ import {View, StatusBar, Image, Text} from 'react-native';
 import homeStyles from '../styles';
 import styles from './styles';
 import Logo from '../../../assets/img/Logo.png';
-import {FormTab, Input} from '../../../components/';
+import {FormTab, Input, OtherButtons} from '../../../components/';
 
 class Login extends Component {
   render() {
@@ -20,12 +20,14 @@ class Login extends Component {
           <View style={homeStyles.form}>
             <FormTab />
             <View style={styles.inputs}>
-              <Input placeholder="First Name" style={styles.input}/>
-              <Input placeholder="Last Name" style={styles.input}/>
+              <Input placeholder="First Name" style={styles.input} />
+              <Input placeholder="Last Name" style={styles.input} />
             </View>
             <Input type="email" placeholder="Email Address" />
             <Input type="password" placeholder="Password" />
             <Input type="password" placeholder="Confirm Password" />
+            <OtherButtons type="facebook" />
+            <OtherButtons type="google" />
           </View>
         </View>
       </View>
