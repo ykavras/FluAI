@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, StatusBar, Image, Text} from 'react-native';
 import homeStyles from '../styles';
 import Logo from '../../../assets/img/Logo.png';
+import {FormTab} from '../../../components/';
 
 class Login extends Component {
   render() {
@@ -15,7 +16,9 @@ class Login extends Component {
         <Image source={Logo} style={homeStyles.logo} />
         <View style={homeStyles.circle} />
         <View style={homeStyles.formWrapper}>
-          <View style={homeStyles.form}></View>
+          <View style={homeStyles.form}>
+            <FormTab />
+          </View>
         </View>
       </View>
     );
