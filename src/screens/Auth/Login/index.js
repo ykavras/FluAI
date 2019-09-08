@@ -3,7 +3,7 @@ import {View, StatusBar, Image, Text} from 'react-native';
 import homeStyles from '../styles';
 import styles from './styles';
 import Logo from '../../../assets/img/Logo.png';
-import {FormTab, Input, OtherButtons} from '../../../components/';
+import {FormTab, Input, OtherButtons, FormPrivacy} from '../../../components/';
 
 class Login extends Component {
   render() {
@@ -28,6 +28,7 @@ class Login extends Component {
             <Input type="password" placeholder="Confirm Password" />
             <OtherButtons type="facebook" />
             <OtherButtons type="google" />
+            <FormPrivacy />
           </View>
         </View>
       </View>
