@@ -11,8 +11,8 @@ class Camera extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      cameraType: 'back',
       mirrorMode: false,
-      flash: false,
     };
   }
   takePicture = async () => {
@@ -25,15 +25,25 @@ class Camera extends Component {
 
   changeCameraFlash() {
     const {flash} = this.state;
+    console.log(flash);
     this.setState({flash: !flash});
   }
   changeCameraType() {
-    const {mirrorMode} = this.state;
-    this.setState({mirrorMode: !mirrorMode});
+    if (this.state.cameraType === 'back') {
+      this.setState({
+        cameraType: 'front',
+        mirror: true,
+      });
+    } else {
+      this.setState({
+        cameraType: 'back',
+        mirror: false,
+      });
+    }
   }
 
   render() {
-    const {mirrorMode, flash} = this.state;
+    const {cameraType, mirror} = this.state;
     return (
       <View style={styles.wrapper}>
         <StatusBar barStyle="light-content" />
@@ -50,13 +60,10 @@ class Camera extends Component {
             this.camera = ref;
           }}
           style={styles.preview}
-          type={RNCamera.Constants.Type.back}
-          flashMode={
-            flash
-              ? RNCamera.Constants.FlashMode.on
-              : RNCamera.Constants.FlashMode.off
-          }
-          mirrorImage={mirrorMode}
+          type={cameraType}
+          mirrorImage={mirror}
+          flashMode={RNCamera.Constants.FlashMode.auto}
+          fixOrientation={true}
           androidCameraPermissionOptions={{
             title: 'Permission to use camera',
             message: 'We need your permission to use your camera',

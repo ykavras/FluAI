@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {ifIphoneX} from 'react-native-iphone-x-helper';
 import theme from '../../lib/theme';
 
@@ -14,7 +14,7 @@ export default StyleSheet.create({
       },
       {
         height: 70,
-        paddingTop: 15,
+        paddingTop: Platform.OS === 'ios' ? 15 : 0,
       },
     ),
   },
