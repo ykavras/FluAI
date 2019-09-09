@@ -4,3 +4,4 @@ export {default as OtherButtons} from './OtherButtons';
 export {default as FormPrivacy} from './FormPrivacy';
 export {default as QuestionInput} from './QuestionInput';
 export {default as DatePickerInput} from './DatePickerInput';
+export {default as OnBoardingItem} from './OnBoardingItem';

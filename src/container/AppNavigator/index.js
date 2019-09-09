@@ -2,12 +2,14 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Animated, Easing} from 'react-native';
 import {Login, Signup, Questions} from '../../screens/Auth/';
+import {OnBoarding} from '../../screens/';
 
 const StackNavigator = createStackNavigator(
   {
     Login,
     Signup,
     Questions,
+    OnBoarding,
   },
   {
     headerMode: 'none',
@@ -29,10 +31,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    Questions,
+    OnBoarding,
   },
   {
-    initialRouteName: 'Questions',
+    initialRouteName: 'OnBoarding',
   },
 );
 
