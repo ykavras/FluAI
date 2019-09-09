@@ -18,7 +18,7 @@ function OnBoardingItem(props) {
           <TouchableOpacity
             onPress={onPress}
             style={[styles.button, {backgroundColor: buttonColor}]}>
-            <Text style={styles.buttonTitle}>Next</Text>
+            <Text style={styles.buttonTitle}>Get Your Photo</Text>
           </TouchableOpacity>
         )}
       </View>

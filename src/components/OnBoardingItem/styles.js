@@ -5,12 +5,11 @@ export default StyleSheet.create({
     flex: 1,
   },
   linearGradient: {
-    flex: 1,
+    flex: 1.4,
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    marginTop: 50,
     width: '80%',
     height: '80%',
     resizeMode: 'contain',
