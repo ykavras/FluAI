@@ -5,3 +5,4 @@ export {default as FormPrivacy} from './FormPrivacy';
 export {default as QuestionInput} from './QuestionInput';
 export {default as DatePickerInput} from './DatePickerInput';
 export {default as OnBoardingItem} from './OnBoardingItem';
+export {default as CameraButton} from './CameraButton';
