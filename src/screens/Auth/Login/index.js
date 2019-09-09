@@ -4,10 +4,11 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import homeStyles from '../styles';
 import styles from './styles';
 import Logo from '../../../assets/img/Logo.png';
-import {FormTab, Input, OtherButtons, FormPrivacy} from '../../../components/';
+import {FormTab, Input, OtherButtons} from '../../../components';
 
 class Login extends Component {
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={homeStyles.wrapper}>
         <StatusBar hidden />
@@ -21,21 +22,20 @@ class Login extends Component {
           style={homeStyles.formWrapper}
           showsVerticalScrollIndicator={false}>
           <View style={[homeStyles.form, styles.customForm]}>
-            <FormTab />
-            <View style={styles.inputs}>
-              <Input placeholder="First Name" style={styles.input} />
-              <Input placeholder="Last Name" style={styles.input} />
-            </View>
+            <FormTab
+              active
+              style={styles.formTab}
+              onPressLogin={() => navigate('Login')}
+              onPressSignup={() => navigate('Signup')}
+            />
             <Input type="email" placeholder="Email Address" />
             <Input type="password" placeholder="Password" />
-            <Input type="password" placeholder="Confirm Password" />
+            <TouchableOpacity
+              style={[homeStyles.formButton, styles.formBtnCustom]}>
+              <Text style={homeStyles.formButtonTitle}>SUBMIT</Text>
+            </TouchableOpacity>
             <OtherButtons type="facebook" />
             <OtherButtons type="google" />
-            <FormPrivacy />
-            <TouchableOpacity
-            style={[homeStyles.formButton, styles.formBtnCustom]}>
-            <Text style={homeStyles.formButtonTitle}>SIGNUP</Text>
-          </TouchableOpacity>
           </View>
         </KeyboardAwareScrollView>
       </View>

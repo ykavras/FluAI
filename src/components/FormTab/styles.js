@@ -10,6 +10,7 @@ export default StyleSheet.create({
     borderRadius: 75,
     alignSelf: 'center',
     backgroundColor: 'rgba(185,185,185,0.2)',
+    marginTop: 5,
   },
   button: {
     flex: 1,

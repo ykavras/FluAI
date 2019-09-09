@@ -28,10 +28,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    Login,
+    Signup,
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Signup',
   },
 );
 

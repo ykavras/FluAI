@@ -2,19 +2,13 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   customForm: {
-    paddingBottom: 45,
-    marginBottom: 30,
+    paddingBottom: 60,
   },
-  inputs: {
-    marginTop: 30,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  input: {
-    width: '49%',
+  formTab: {
+    marginBottom: 16,
   },
   formBtnCustom: {
-    position: 'absolute',
-    bottom: -22,
+    marginTop: 10,
+    marginBottom: 60,
   },
 });
