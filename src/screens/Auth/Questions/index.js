@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Image, StatusBar, Text, View} from 'react-native';
+import {Image, StatusBar, Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import homeStyles from '../styles';
 import Logo from '../../../assets/img/Logo.png';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import DoctorIcon from '../../../assets/img/Doctor.png';
-import {QuestionInput} from '../../../components';
+import {DatePickerInput, QuestionInput} from '../../../components';
 class Questions extends Component {
   constructor(props) {
     super(props);
@@ -15,11 +15,12 @@ class Questions extends Component {
         {label: 'Baseball', value: 'baseball'},
         {label: 'Hockey', value: 'hockey'},
       ],
+      date: '',
     };
   }
 
   render() {
-    const {items} = this.state;
+    const {items, date} = this.state;
     return (
       <View style={homeStyles.wrapper}>
         <StatusBar hidden />
@@ -33,10 +34,12 @@ class Questions extends Component {
           showsVerticalScrollIndicator={false}>
           <Image source={DoctorIcon} style={styles.doctor} />
           <Text style={styles.doctorTitle}>Almost ready to start...</Text>
-          <QuestionInput
-            placeholder="Sex"
-            items={items}
-            onValueChange={value => console.log(value)}
+          <DatePickerInput
+            placeholder="Birthday"
+            date={date}
+            onDateChange={value => {
+              this.setState({date: value});
+            }}
           />
           <QuestionInput
             placeholder="Sex"
@@ -53,6 +56,9 @@ class Questions extends Component {
             items={items}
             onValueChange={value => console.log(value)}
           />
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonTitle}>Next</Text>
+          </TouchableOpacity>
         </KeyboardAwareScrollView>
       </View>
     );

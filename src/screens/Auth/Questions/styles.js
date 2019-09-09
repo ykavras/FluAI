@@ -29,4 +29,17 @@ export default StyleSheet.create({
     marginTop: 16,
     marginBottom: 50,
   },
+  button: {
+    marginTop: 20,
+    backgroundColor: '#4A9EFF',
+    height: 36,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 18,
+  },
+  buttonTitle: {
+    fontFamily: theme.robotoMedium,
+    fontSize: 14,
+    color: 'white',
+  },
 });
