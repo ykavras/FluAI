@@ -4,10 +4,10 @@ import styles from './styles';
 
 import CameraIcon from '../../assets/icons/Camera';
 import TurnIcon from '../../assets/icons/Turn';
-import FlashIcon from '../../assets/icons/Bulb';
+import GalleryIcon from '../../assets/icons/Gallery';
 
 const types = {
-  flash: <FlashIcon style={styles.cameraIcon} />,
+  gallery: <GalleryIcon style={styles.cameraIcon} />,
   camera: <CameraIcon style={styles.cameraIcon} />,
   mirror: <TurnIcon style={styles.cameraIcon} />,
 };

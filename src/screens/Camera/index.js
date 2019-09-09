@@ -78,7 +78,7 @@ class Camera extends Component {
           }}
         />
         <View style={styles.cameraFoot}>
-          <CameraButton onPress={() => this.changeCameraFlash()} type="flash" />
+          <CameraButton onPress={() => this.changeCameraFlash()} type="gallery" />
           <CameraButton onPress={() => this.takePicture()} type="camera" />
           <CameraButton onPress={() => this.changeCameraType()} type="mirror" />
         </View>
