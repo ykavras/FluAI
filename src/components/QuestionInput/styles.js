@@ -7,6 +7,9 @@ export default StyleSheet.create({
     borderColor: '#B7BFFF',
     marginBottom: 22,
   },
+  inputAndroid: {
+    paddingHorizontal: 0,
+  },
   inputIOS: {
     fontSize: 14,
     fontFamily: theme.robotoMedium,

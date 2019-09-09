@@ -11,6 +11,7 @@ function QuestionInput(props) {
         onValueChange={onValueChange}
         items={items}
         placeholder={{label: placeholder, value: null}}
+        useNativeAndroidPickerStyle={false}
         style={{...styles}}
       />
     </View>
