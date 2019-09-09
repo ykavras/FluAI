@@ -5,6 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import imageOne from '../../assets/img/onBoarding/image-1.png';
 function OnBoardingItem(props) {
   const {color1, color2, image, title, text, onPress, buttonColor} = props;
+  console.log(onPress);
   return (
     <View style={styles.wrapper}>
       <LinearGradient colors={[color1, color2]} style={styles.linearGradient}>
@@ -13,11 +14,13 @@ function OnBoardingItem(props) {
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.text}>{text}</Text>
-        <TouchableOpacity
-          onPress={onPress}
-          style={[styles.button, {backgroundColor: buttonColor}]}>
-          <Text style={styles.buttonTitle}>Next</Text>
-        </TouchableOpacity>
+        {onPress && (
+          <TouchableOpacity
+            onPress={onPress}
+            style={[styles.button, {backgroundColor: buttonColor}]}>
+            <Text style={styles.buttonTitle}>Next</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
