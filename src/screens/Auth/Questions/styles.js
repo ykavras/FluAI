@@ -11,6 +11,9 @@ export default StyleSheet.create({
     transform: [{rotate: '180deg'}],
     zIndex: -1,
   },
+  keyboardWrapper: {
+    paddingHorizontal: 40,
+  },
   doctor: {
     width: 98,
     height: 170,
