@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FluAITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FluAITests.m */; };
 		0633929F38A38397F30BA817 /* libPods-FluAI-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 567E12199D54958014F48C94 /* libPods-FluAI-tvOSTests.a */; };
@@ -17,14 +18,14 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* FluAITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FluAITests.m */; };
 		60E160E2841EBA7C820C31F5 /* libPods-FluAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1768DA1EDE892C6EAACF86 /* libPods-FluAI.a */; };
-		BFA52FE62BDEE0A1936CF5C4 /* libPods-FluAI-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE737F28991963C9E1EC586 /* libPods-FluAI-tvOS.a */; };
-		C5F69D6C02F780C72A199EB3 /* libPods-FluAITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7215D2103A304A9A4896E35 /* libPods-FluAITests.a */; };
 		75A70A611DC24BCA8C8C385B /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EF451E142F54C17863063EF /* Montserrat-Bold.ttf */; };
-		C31F255C1BCB497FBA0E9C8F /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95DC05AEB90D42BEAF22276D /* Montserrat-Light.ttf */; };
-		B5969A220B88461285EC950A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAE67E10C53D493CA507742E /* Montserrat-Medium.ttf */; };
 		7971959B232B4B17BB6531E3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 287EAE22087645BCA0BDA5D9 /* Roboto-Bold.ttf */; };
-		F52EEFCDC5574BB69EDE097F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B42CCD677F55423D8BD6A7DD /* Roboto-Light.ttf */; };
+		B5969A220B88461285EC950A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAE67E10C53D493CA507742E /* Montserrat-Medium.ttf */; };
+		BFA52FE62BDEE0A1936CF5C4 /* libPods-FluAI-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE737F28991963C9E1EC586 /* libPods-FluAI-tvOS.a */; };
+		C31F255C1BCB497FBA0E9C8F /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95DC05AEB90D42BEAF22276D /* Montserrat-Light.ttf */; };
+		C5F69D6C02F780C72A199EB3 /* libPods-FluAITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7215D2103A304A9A4896E35 /* libPods-FluAITests.a */; };
 		C75D45A7D2F24403A3AEBA88 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCE80BB7D61D476CBD7F4421 /* Roboto-Medium.ttf */; };
+		F52EEFCDC5574BB69EDE097F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B42CCD677F55423D8BD6A7DD /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FluAI/main.m; sourceTree = "<group>"; };
 		1CF3AC93135D62E7F8A85C0F /* Pods-FluAI-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAI-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-FluAI-tvOSTests/Pods-FluAI-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FE737F28991963C9E1EC586 /* libPods-FluAI-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FluAI-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		287EAE22087645BCA0BDA5D9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* FluAI-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FluAI-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* FluAI-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FluAI-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1768DA1EDE892C6EAACF86 /* libPods-FluAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FluAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,19 +67,18 @@
 		3860C861C9C24772168DFEB4 /* Pods-FluAITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAITests.release.xcconfig"; path = "Target Support Files/Pods-FluAITests/Pods-FluAITests.release.xcconfig"; sourceTree = "<group>"; };
 		567E12199D54958014F48C94 /* libPods-FluAI-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FluAI-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D3DE9F18709640CD8E612D /* Pods-FluAI-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAI-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-FluAI-tvOS/Pods-FluAI-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		95DC05AEB90D42BEAF22276D /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../src/assets/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		9EF451E142F54C17863063EF /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		A6E0EEC39EB6835B33757155 /* Pods-FluAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAI.debug.xcconfig"; path = "Target Support Files/Pods-FluAI/Pods-FluAI.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C01108A17F3AA6732D986 /* Pods-FluAI-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAI-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-FluAI-tvOSTests/Pods-FluAI-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B42CCD677F55423D8BD6A7DD /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		BCE80BB7D61D476CBD7F4421 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		CAAA60985D2E5970102FEB42 /* Pods-FluAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAITests.debug.xcconfig"; path = "Target Support Files/Pods-FluAITests/Pods-FluAITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7215D2103A304A9A4896E35 /* libPods-FluAITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FluAITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5EC091FCB58A82BFD3618B /* Pods-FluAI-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FluAI-tvOS.release.xcconfig"; path = "Target Support Files/Pods-FluAI-tvOS/Pods-FluAI-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		EAE67E10C53D493CA507742E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../src/assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		9EF451E142F54C17863063EF /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		95DC05AEB90D42BEAF22276D /* Montserrat-Light.ttf */ = {isa = PBXFileReference; name = "Montserrat-Light.ttf"; path = "../src/assets/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EAE67E10C53D493CA507742E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; name = "Montserrat-Medium.ttf"; path = "../src/assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		287EAE22087645BCA0BDA5D9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B42CCD677F55423D8BD6A7DD /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BCE80BB7D61D476CBD7F4421 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,12 +207,11 @@
 				CAAA60985D2E5970102FEB42 /* Pods-FluAITests.debug.xcconfig */,
 				3860C861C9C24772168DFEB4 /* Pods-FluAITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B2428FD14B9B4205AD6CE061 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				9EF451E142F54C17863063EF /* Montserrat-Bold.ttf */,
 				95DC05AEB90D42BEAF22276D /* Montserrat-Light.ttf */,
@@ -222,7 +222,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -334,6 +333,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -669,6 +669,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FluAI;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -688,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FluAI;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

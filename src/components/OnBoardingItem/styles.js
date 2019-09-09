@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import theme from '../../lib/theme';
 export default StyleSheet.create({
   wrapper: {
@@ -14,11 +14,21 @@ export default StyleSheet.create({
     height: '80%',
     resizeMode: 'contain',
   },
+  pattern: {
+    height: Dimensions.get('window').width * 0.1,
+    resizeMode: 'stretch',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1,
+  },
   content: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 40,
+    paddingTop: 40,
   },
   title: {
     textAlign: 'center',

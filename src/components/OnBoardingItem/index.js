@@ -3,6 +3,8 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import imageOne from '../../assets/img/onBoarding/image-1.png';
+import PatternIcon from '../../assets/icons/Pattern';
+
 function OnBoardingItem(props) {
   const {color1, color2, image, title, text, onPress, buttonColor} = props;
   console.log(onPress);
@@ -10,6 +12,7 @@ function OnBoardingItem(props) {
     <View style={styles.wrapper}>
       <LinearGradient colors={[color1, color2]} style={styles.linearGradient}>
         <Image source={image} style={styles.image} />
+        <PatternIcon style={styles.pattern} />
       </LinearGradient>
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
