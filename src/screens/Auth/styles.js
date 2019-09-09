@@ -6,13 +6,13 @@ const {width} = Dimensions.get('window');
 export default StyleSheet.create({
   wrapper: {
     flex: 1,
-    paddingVertical: 20,
-    paddingHorizontal: 15,
+    paddingTop: 20,
     backgroundColor: '#FFFFFF',
   },
   logoWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: 15,
   },
   logoSmall: {
     width: 49,
@@ -26,11 +26,11 @@ export default StyleSheet.create({
     color: '#505050',
   },
   logo: {
-    width: 220,
-    height: 192,
+    width: 200,
+    height: 174,
     resizeMode: 'contain',
     position: 'absolute',
-    right: -66,
+    right: -60,
     top: -10,
   },
   circle: {
@@ -46,7 +46,6 @@ export default StyleSheet.create({
   },
   formWrapper: {
     flex: 1,
-    justifyContent: 'center',
   },
   form: {
     borderRadius: 10,
@@ -59,6 +58,22 @@ export default StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 10,
     elevation: 5,
-    padding: 20,
+    padding: 15,
+    margin: 20,
+    marginTop: 100,
+  },
+  formButton: {
+    width: 130,
+    height: 44,
+    borderRadius: 44,
+    backgroundColor: '#4A9EFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+  formButtonTitle: {
+    fontFamily: theme.robotoMedium,
+    color: 'white',
+    fontSize: 16,
   },
 });

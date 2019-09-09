@@ -22,6 +22,6 @@ export default StyleSheet.create({
     color: '#1A1A1A',
     fontSize: 14,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 12,
   },
 });

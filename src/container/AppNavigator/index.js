@@ -1,11 +1,12 @@
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Animated, Easing} from 'react-native';
-import {Login} from '../../screens/Auth/';
+import {Login, Signup} from '../../screens/Auth/';
 
 const StackNavigator = createStackNavigator(
   {
     Login,
+    Signup,
   },
   {
     headerMode: 'none',

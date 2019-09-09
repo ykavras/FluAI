@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, StatusBar, Image, Text} from 'react-native';
+import {View, StatusBar, Image, Text, TouchableOpacity} from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import homeStyles from '../styles';
 import styles from './styles';
 import Logo from '../../../assets/img/Logo.png';
@@ -16,8 +17,10 @@ class Login extends Component {
         </View>
         <Image source={Logo} style={homeStyles.logo} />
         <View style={homeStyles.circle} />
-        <View style={homeStyles.formWrapper}>
-          <View style={homeStyles.form}>
+        <KeyboardAwareScrollView
+          style={homeStyles.formWrapper}
+          showsVerticalScrollIndicator={false}>
+          <View style={[homeStyles.form, styles.customForm]}>
             <FormTab />
             <View style={styles.inputs}>
               <Input placeholder="First Name" style={styles.input} />
@@ -29,8 +32,12 @@ class Login extends Component {
             <OtherButtons type="facebook" />
             <OtherButtons type="google" />
             <FormPrivacy />
+            <TouchableOpacity
+            style={[homeStyles.formButton, styles.formBtnCustom]}>
+            <Text style={homeStyles.formButtonTitle}>SIGNUP</Text>
+          </TouchableOpacity>
           </View>
-        </View>
+        </KeyboardAwareScrollView>
       </View>
     );
   }
