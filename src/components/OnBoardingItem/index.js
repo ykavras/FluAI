@@ -2,12 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
-import imageOne from '../../assets/img/onBoarding/image-1.png';
+import defaultLogo from '../../assets/img/Logo.png';
 import PatternIcon from '../../assets/icons/Pattern';
 
 function OnBoardingItem(props) {
   const {color1, color2, image, title, text, onPress, buttonColor} = props;
-  console.log(onPress);
   return (
     <View style={styles.wrapper}>
       <LinearGradient colors={[color1, color2]} style={styles.linearGradient}>
@@ -32,7 +31,7 @@ function OnBoardingItem(props) {
 OnBoardingItem.defaultProps = {
   color1: '#F2871E',
   color2: '#E24526',
-  image: imageOne,
+  image: defaultLogo,
   title: 'Title',
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
   buttonColor: '#E24526',
