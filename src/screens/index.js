@@ -6,3 +6,4 @@ export {default as Camera} from './Camera';
 export {default as Analyzing} from './Analyzing';
 export {default as AnalyzingAnswer} from './AnalyzingAnswer';
 export {default as Symptoms} from './Symptoms';
+export {default as SymptomsQuestion} from './SymptomsQuestion';
