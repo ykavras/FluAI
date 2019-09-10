@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import {View, StatusBar, TouchableOpacity, Text} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import styles from './styles';
 import {RNCamera} from 'react-native-camera';
-
-import LeftArrowIcon from '../../assets/icons/LeftArrow';
-import LinearGradient from 'react-native-linear-gradient';
-import {CameraButton} from '../../components';
+import ImagePicker from 'react-native-image-picker';
+import {CameraButton, CameraHeader, CameraPreviewImage} from '../../components';
 
 class Camera extends Component {
   constructor(props) {
@@ -13,21 +11,14 @@ class Camera extends Component {
     this.state = {
       cameraType: 'back',
       mirrorMode: false,
+      getPhoto: false,
+      imageWrapper: false,
+      image: undefined,
+      imagePreview: undefined,
+      loader: false,
     };
   }
-  takePicture = async () => {
-    if (this.camera) {
-      const options = {quality: 0.5, base64: true};
-      const data = await this.camera.takePictureAsync(options);
-      console.log(data.uri);
-    }
-  };
 
-  changeCameraFlash() {
-    const {flash} = this.state;
-    console.log(flash);
-    this.setState({flash: !flash});
-  }
   changeCameraType() {
     if (this.state.cameraType === 'back') {
       this.setState({
@@ -42,19 +33,87 @@ class Camera extends Component {
     }
   }
 
+  getGallery = () => {
+    this.setState({getPhoto: true, imageWrapper: true, loader: true});
+    ImagePicker.launchImageLibrary(
+      {
+        storageOptions: {
+          skipBackup: true,
+          path: 'images',
+        },
+      },
+      async response => {
+        const imageURI = await response;
+        response.didCancel &&
+          this.setState({
+            getPhoto: false,
+            loader: false,
+            imageWrapper: false,
+            imagePreview: undefined,
+          });
+        imageURI &&
+          this.setState({
+            getPhoto: false,
+            image: imageURI.data,
+            imagePreview: imageURI.uri,
+            loader: false,
+          });
+      },
+    );
+  };
+
+  takePicture = async () => {
+    this.setState({loader: true, imagePreview: undefined});
+    if (this.camera) {
+      const options = {quality: 0.5, base64: true};
+      const data = await this.camera.takePictureAsync(options);
+      data &&
+        this.setState({
+          imageWrapper: true,
+          image: data.base64,
+          imagePreview: data.uri,
+          loader: false,
+        });
+    }
+  };
+
+  cancelPhoto = () => {
+    this.setState({
+      getPhoto: false,
+      imageWrapper: false,
+      image: undefined,
+      imagePreview: undefined,
+      loader: false,
+    });
+  };
+
+  postPhoto = async image => {
+    const postImage = await image;
+    console.log(postImage);
+  };
+
   render() {
-    const {cameraType, mirror} = this.state;
+    const {
+      cameraType,
+      mirror,
+      getPhoto,
+      imageWrapper,
+      image,
+      imagePreview,
+      loader,
+    } = this.state;
     return (
       <View style={styles.wrapper}>
         <StatusBar barStyle="light-content" />
-        <LinearGradient
-          style={styles.cameraHead}
-          colors={['#3848BE', '#70D2FD']}>
-          <TouchableOpacity style={styles.cameraHeadBtn} y>
-            <LeftArrowIcon style={styles.arrow} />
-            <Text style={styles.cameraHeadTitle}>Camera</Text>
-          </TouchableOpacity>
-        </LinearGradient>
+        <CameraHeader />
+        {imageWrapper && (
+          <CameraPreviewImage
+            image={imagePreview}
+            loader={loader}
+            no={() => this.cancelPhoto()}
+            yes={() => this.postPhoto(image)}
+          />
+        )}
         <RNCamera
           ref={ref => {
             this.camera = ref;
@@ -78,7 +137,10 @@ class Camera extends Component {
           }}
         />
         <View style={styles.cameraFoot}>
-          <CameraButton onPress={() => this.changeCameraFlash()} type="gallery" />
+          <CameraButton
+            onPress={() => this.getGallery()}
+            type={getPhoto ? 'timer' : 'gallery'}
+          />
           <CameraButton onPress={() => this.takePicture()} type="camera" />
           <CameraButton onPress={() => this.changeCameraType()} type="mirror" />
         </View>

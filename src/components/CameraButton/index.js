@@ -5,8 +5,10 @@ import styles from './styles';
 import CameraIcon from '../../assets/icons/Camera';
 import TurnIcon from '../../assets/icons/Turn';
 import GalleryIcon from '../../assets/icons/Gallery';
+import TimerIcon from '../../assets/icons/Timer';
 
 const types = {
+  timer: <TimerIcon style={styles.cameraIcon} />,
   gallery: <GalleryIcon style={styles.cameraIcon} />,
   camera: <CameraIcon style={styles.cameraIcon} />,
   mirror: <TurnIcon style={styles.cameraIcon} />,

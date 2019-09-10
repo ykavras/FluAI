@@ -6,3 +6,6 @@ export {default as QuestionInput} from './QuestionInput';
 export {default as DatePickerInput} from './DatePickerInput';
 export {default as OnBoardingItem} from './OnBoardingItem';
 export {default as CameraButton} from './CameraButton';
+export {default as CameraHeader} from './CameraHeader';
+export {default as CameraPreviewImage} from './CameraPreviewImage';
+export {default as CheckButtonsPhoto} from './CheckButtonsPhoto';
