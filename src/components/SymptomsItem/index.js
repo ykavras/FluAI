@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import styles from './styles';
+import {SymptomsSlider} from '../index';
 
 const types = {
   FEVER: {
@@ -47,7 +48,7 @@ const types = {
 };
 
 function SymptomsItem(props) {
-  const {type} = props;
+  const {type, slider, value, step, maximumValue, onValueChange} = props;
   return (
     <View style={styles.wrapper}>
       <View style={styles.context}>
@@ -59,13 +60,23 @@ function SymptomsItem(props) {
           )}
         </View>
       </View>
-      <View style={styles.progress} />
+      {slider && (
+        <View style={styles.progress}>
+          <SymptomsSlider
+            onValueChange={onValueChange}
+            value={value}
+            step={step}
+            maximumValue={maximumValue}
+          />
+        </View>
+      )}
     </View>
   );
 }
 
 SymptomsItem.defaultProps = {
   type: 'FEVER',
+  slider: false,
 };
 
 export default SymptomsItem;

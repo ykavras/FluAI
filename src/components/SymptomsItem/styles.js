@@ -30,6 +30,9 @@ export default StyleSheet.create({
     fontSize: 10,
     color: 'white',
     paddingTop: 6,
+    width: 100,
   },
-  progress: {},
+  progress: {
+    flex: 1,
+  },
 });

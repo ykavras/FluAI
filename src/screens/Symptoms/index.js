@@ -10,19 +10,87 @@ class Symptoms extends Component {
     super(props);
     this.state = {
       data: [
-        'FEVER',
-        'SORE_THROAT',
-        'COUGH',
-        'MUSCLE_PAIN',
-        'RUNNY_NOSE',
-        'HEADACHE',
-        'NAUSEA_VOMIT',
-        'FATIGUE',
-        'SNEEZE',
-        'DURATION',
+        {
+          type: 'FEVER',
+          value: 0,
+          slider: true,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'SORE_THROAT',
+          value: 0,
+          slider: false,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'COUGH',
+          value: 0,
+          slider: true,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'MUSCLE_PAIN',
+          value: 0,
+          slider: false,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'RUNNY_NOSE',
+          value: 0,
+          slider: true,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'HEADACHE',
+          value: 0,
+          slider: false,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'NAUSEA_VOMIT',
+          value: 0,
+          slider: false,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'FATIGUE',
+          value: 0,
+          slider: true,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'SNEEZE',
+          value: 0,
+          slider: false,
+          step: 1,
+          maximumValue: 10,
+        },
+        {
+          type: 'DURATION',
+          value: 0,
+          slider: true,
+          step: 1,
+          maximumValue: 10,
+        },
       ],
     };
   }
+
+  onChangeValue = (type, val) => {
+    const {data} = this.state;
+    const newData = data.map(el =>
+      el.type === type ? {...el, value: val} : el,
+    );
+    this.setState({data: newData});
+  };
 
   render() {
     const {data} = this.state;
@@ -49,7 +117,17 @@ class Symptoms extends Component {
             showsVerticalScrollIndicator={false}
             data={data}
             renderItem={({item, i}) => {
-              return <SymptomsItem type={item} />;
+              return (
+                <SymptomsItem
+                  key={`item_${i}`}
+                  type={item.type}
+                  slider={item.slider}
+                  step={item.step}
+                  maximumValue={item.maximumValue}
+                  onValueChange={val => this.onChangeValue(item.type, val)}
+                  value={item.value}
+                />
+              );
             }}
           />
         </LinearGradient>
