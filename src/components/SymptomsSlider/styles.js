@@ -25,7 +25,8 @@ export default StyleSheet.create({
   },
   value: {
     fontFamily: theme.montserratBold,
-    fontSize: 14,
+    fontSize: 12,
+    lineHeight: 14,
     color: '#7E7E7E',
     paddingLeft: 8,
   },

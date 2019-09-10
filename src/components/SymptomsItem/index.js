@@ -54,7 +54,9 @@ function SymptomsItem(props) {
       <View style={styles.context}>
         <Image source={types[type].image} style={styles.image} />
         <View>
-          <Text style={styles.title}>{types[type].title}</Text>
+          <Text style={[styles.title, slider && styles.titleBold]}>
+            {types[type].title}
+          </Text>
           {types[type].text && (
             <Text style={styles.text}>{types[type].text}</Text>
           )}
@@ -63,6 +65,7 @@ function SymptomsItem(props) {
       {slider && (
         <View style={styles.progress}>
           <SymptomsSlider
+            slider={slider}
             onValueChange={onValueChange}
             value={value}
             step={step}

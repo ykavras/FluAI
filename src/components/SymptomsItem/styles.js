@@ -1,5 +1,17 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import theme from '../../lib/theme';
+
+const width = Dimensions.get('window').width;
+
+let context = 140;
+let image = 32;
+let title = 12;
+
+if (width < 375) {
+  context = 120;
+  image = 22;
+  title = 10;
+}
 
 export default StyleSheet.create({
   wrapper: {
@@ -10,20 +22,23 @@ export default StyleSheet.create({
     paddingVertical: 10,
   },
   context: {
-    width: 140,
+    minWidth: context,
     flexDirection: 'row',
     alignItems: 'center',
   },
   image: {
-    width: 32,
-    height: 32,
+    width: image,
+    height: image,
     resizeMode: 'contain',
     marginRight: 10,
   },
   title: {
     fontFamily: theme.montserratMedium,
-    fontSize: 12,
+    fontSize: title,
     color: 'white',
+  },
+  titleBold: {
+    fontFamily: theme.montserratBold,
   },
   text: {
     fontFamily: theme.montserratLight,
@@ -34,5 +49,7 @@ export default StyleSheet.create({
   },
   progress: {
     flex: 1,
+    paddingLeft: 10,
+    justifyContent: 'center',
   },
 });

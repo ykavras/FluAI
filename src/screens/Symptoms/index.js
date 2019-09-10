@@ -1,5 +1,12 @@
-import React, {Component} from 'react';
-import {View, StatusBar, Text, Image, FlatList} from 'react-native';
+import React, { Component, Fragment } from 'react';
+import {
+  View,
+  StatusBar,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import Logo from '../../assets/img/Logo.png';
@@ -104,18 +111,34 @@ class Symptoms extends Component {
             <Image source={Logo} style={styles.logo} />
             <Text style={styles.logoTitle}>FluAI</Text>
           </View>
-          <View style={styles.context}>
-            <Text style={styles.title}>What are your symptoms?</Text>
-            <Text style={styles.textMedium}>
-              Please select and rate your symptoms between 0 to 10
-            </Text>
-            <Text style={styles.text}>
-              You can leave blank to symptoms that you dont have.
-            </Text>
-          </View>
           <FlatList
             showsVerticalScrollIndicator={false}
             data={data}
+            ListHeaderComponent={
+              <View style={styles.context}>
+                <Text style={styles.title}>What are your symptoms?</Text>
+                <Text style={[styles.text, styles.textMedium]}>
+                  Please select and rate your symptoms between 0 to 10
+                </Text>
+                <Text style={styles.text}>
+                  You can leave blank to symptoms that you dont have.
+                </Text>
+              </View>
+            }
+            ListFooterComponent={
+              <View style={styles.buttons}>
+                <TouchableOpacity style={[styles.button, styles.buttonReset]}>
+                  <Text style={[styles.buttonTitle, styles.buttonTitleReset]}>
+                    Reset
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.button, styles.buttonNext]}>
+                  <Text style={[styles.buttonTitle, styles.buttonTitleNext]}>
+                    Next
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            }
             renderItem={({item, i}) => {
               return (
                 <SymptomsItem
