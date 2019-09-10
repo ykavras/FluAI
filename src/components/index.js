@@ -9,3 +9,4 @@ export {default as CameraButton} from './CameraButton';
 export {default as CameraHeader} from './CameraHeader';
 export {default as CameraPreviewImage} from './CameraPreviewImage';
 export {default as CheckButtonsPhoto} from './CheckButtonsPhoto';
+export {default as SymptomsItem} from './SymptomsItem';
