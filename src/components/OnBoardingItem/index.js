@@ -6,7 +6,16 @@ import defaultLogo from '../../assets/img/Logo.png';
 import PatternIcon from '../../assets/icons/Pattern';
 
 function OnBoardingItem(props) {
-  const {color1, color2, image, title, text, onPress, buttonColor} = props;
+  const {
+    color1,
+    color2,
+    image,
+    title,
+    text,
+    onPress,
+    buttonColor,
+    buttonTitle,
+  } = props;
   return (
     <View style={styles.wrapper}>
       <LinearGradient colors={[color1, color2]} style={styles.linearGradient}>
@@ -20,7 +29,7 @@ function OnBoardingItem(props) {
           <TouchableOpacity
             onPress={onPress}
             style={[styles.button, {backgroundColor: buttonColor}]}>
-            <Text style={styles.buttonTitle}>Get Your Photo</Text>
+            <Text style={styles.buttonTitle}>{buttonTitle}</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -35,6 +44,7 @@ OnBoardingItem.defaultProps = {
   title: 'Title',
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
   buttonColor: '#E24526',
+  buttonTitle: 'Get Your Photo',
 };
 
 export default OnBoardingItem;
