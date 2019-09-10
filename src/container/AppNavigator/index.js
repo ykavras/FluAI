@@ -2,7 +2,7 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Animated, Easing} from 'react-native';
 import {Login, Signup, Questions} from '../../screens/Auth/';
-import {OnBoarding, Camera, Analyzing, AnalyzingAnswer} from '../../screens/';
+import {OnBoarding, Camera, Analyzing, AnalyzingAnswer, Symptoms} from '../../screens/';
 
 const StackNavigator = createStackNavigator(
   {
@@ -13,6 +13,7 @@ const StackNavigator = createStackNavigator(
     Camera,
     Analyzing,
     AnalyzingAnswer,
+    Symptoms,
   },
   {
     headerMode: 'none',
@@ -34,10 +35,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    AnalyzingAnswer,
+    Symptoms,
   },
   {
-    initialRouteName: 'AnalyzingAnswer',
+    initialRouteName: 'Symptoms',
   },
 );
 
