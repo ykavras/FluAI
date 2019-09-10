@@ -89,7 +89,7 @@ class Camera extends Component {
 
   postPhoto = async image => {
     const postImage = await image;
-    console.log(postImage);
+    postImage && this.props.navigation.navigate('Analyzing');
   };
 
   render() {

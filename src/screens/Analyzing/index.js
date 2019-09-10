@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View, StatusBar} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import PatternIcon from '../../assets/icons/Pattern';
@@ -11,6 +11,7 @@ class Analyzing extends Component {
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.wrapper}>
+        <StatusBar barStyle="light-content" />
         <LinearGradient
           colors={['#306EFF', '#90FFE9']}
           style={styles.linearGradient}>
@@ -23,7 +24,7 @@ class Analyzing extends Component {
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonTitle}>Next</Text>
           </TouchableOpacity>
-          <Image source={imageWave} style={styles.wave}/>
+          <Image source={imageWave} style={styles.wave} />
         </View>
       </View>
     );
