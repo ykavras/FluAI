@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StatusBar, TouchableOpacity} from 'react-native';
+import {View, Text, Image, StatusBar, Dimensions} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import Logo from '../../assets/img/Logo.png';
@@ -7,14 +7,22 @@ import ProfileImage from '../ProfileImage';
 import HeaderBottomRight from '../HeaderBottomRight';
 import HeaderBottomLeft from '../HeaderBottomLeft';
 
+const width = Dimensions.get('window').width;
+
+let size = 150;
+let progressWidth = 22;
+
+if (width < 375) {
+  size = 125;
+  progressWidth = 10;
+}
+
 function Header(props) {
   const {
     color1,
     color2,
     title,
     bottom,
-    size,
-    width,
     fill,
     progressText,
     share,
@@ -39,7 +47,7 @@ function Header(props) {
         <View style={styles.bottom}>
           <HeaderBottomLeft
             size={size}
-            width={width}
+            width={progressWidth}
             fill={fill}
             text={progressText}
             share={share}
@@ -62,8 +70,6 @@ Header.defaultProps = {
   color2: '#2F6B81',
   title: 'Current Screen Title',
   bottom: false,
-  size: 150,
-  width: 24,
   fill: 80,
   progressText: 'Text',
   text: 'Text',
