@@ -32,6 +32,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontFamily: theme.montserratMedium,
     fontSize: progressCount,
+    lineHeight: progressCount,
     color: 'white',
   },
   progressText: {

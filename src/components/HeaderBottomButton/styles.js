@@ -7,7 +7,7 @@ export default StyleSheet.create({
     marginVertical: 6,
   },
   reButton: {
-    minWidth: 120,
+    minWidth: 140,
     paddingVertical: 10,
     paddingHorizontal: 20,
   },

@@ -8,6 +8,7 @@ class Main extends Component {
     return (
       <View style={styles.wrapper}>
         <Header
+          bottom
           fill={38}
           progressText="Bacterial Pharyngitis"
           text="Your recovery will takes"

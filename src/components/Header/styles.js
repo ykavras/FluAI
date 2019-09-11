@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {ifIphoneX} from 'react-native-iphone-x-helper';
 import theme from '../../lib/theme';
 
@@ -13,14 +13,21 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingBottom: 10,
-    ...ifIphoneX(
-      {
-        paddingTop: 40,
+    ...Platform.select({
+      ios: {
+        ...ifIphoneX(
+          {
+            paddingTop: 40,
+          },
+          {
+            paddingTop: 30,
+          },
+        ),
       },
-      {
-        paddingTop: 30,
+      android: {
+        paddingTop: 10,
       },
-    ),
+    }),
   },
   logo: {
     flexDirection: 'row',
