@@ -1,10 +1,22 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import theme from '../../lib/theme';
+
+const width = Dimensions.get('window').width;
+
+let size = 150;
+let progressCount = 18;
+let progressText = 12;
+
+if (width < 375) {
+  size = 125;
+  progressCount = 14;
+  progressText = 10;
+}
 
 export default StyleSheet.create({
   progressWrapper: {
-    width: 150,
-    height: 150,
+    width: size,
+    height: size,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -19,14 +31,15 @@ export default StyleSheet.create({
   progressCount: {
     textAlign: 'center',
     fontFamily: theme.montserratMedium,
-    fontSize: 18,
+    fontSize: progressCount,
     color: 'white',
   },
   progressText: {
     textAlign: 'center',
     paddingTop: 4,
     fontFamily: theme.montserratBold,
-    fontSize: 12,
+    fontSize: progressText,
+    lineHeight: progressText + 4,
     color: 'white',
   },
 });

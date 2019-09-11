@@ -34,9 +34,9 @@ function HeaderBottomRight(props) {
 }
 
 HeaderBottomRight.defaultProps = {
-  text: 'Your recovery will takes',
-  textBold: '3-4 days',
-  textSmall: '(approx.)',
+  text: 'Text',
+  textBold: 'Bold Text',
+  textSmall: 'Small Text',
 };
 
 export default HeaderBottomRight;

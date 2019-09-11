@@ -10,15 +10,19 @@ function Progress(props) {
       size={size}
       width={width}
       fill={fill}
-      prefill={100}
-      beginColor="#15E346"
-      endColor="#FF6600"
+      prefill={0}
+      beginColor="#FF6600"
+      endColor="#15E346"
       segments={16}
       backgroundColor="rgba(169,169,169,0.3)"
       linecap="round"
-      style={styles.progressWrapper}>
+      style={[styles.progressWrapper, {transform: [{rotate: '180deg'}]}]}>
       {count => (
-        <View style={styles.progressWrapperTitle}>
+        <View
+          style={[
+            styles.progressWrapperTitle,
+            {transform: [{rotate: '-180deg'}]},
+          ]}>
           <Text style={styles.progressCount}> {count.toFixed(0)}% </Text>
           <Text style={styles.progressText}>{text}</Text>
         </View>

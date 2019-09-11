@@ -1,9 +1,17 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import theme from '../../lib/theme';
+
+const width = Dimensions.get('window').width;
+
+let flex = 1;
+
+if (width < 375) {
+  flex = 0.8;
+}
 
 export default StyleSheet.create({
   left: {
-    flex: 1,
+    flex: flex,
     justifyContent: 'center',
     alignItems: 'center',
   },
