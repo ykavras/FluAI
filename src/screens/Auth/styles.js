@@ -1,7 +1,13 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import theme from '../../lib/theme';
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
+
+let mt = 100;
+
+if (width < 375 || height <= 568) {
+  mt = 30;
+}
 
 export default StyleSheet.create({
   wrapper: {
@@ -60,7 +66,7 @@ export default StyleSheet.create({
     elevation: 5,
     padding: 15,
     margin: 20,
-    marginTop: 100,
+    marginTop: mt,
   },
   formButton: {
     width: 130,

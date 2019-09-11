@@ -1,5 +1,15 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import theme from '../../lib/theme';
+
+const width = Dimensions.get('window').width;
+
+let size = 10;
+let icon = 14;
+
+if (width < 375) {
+  size = 8;
+  icon = 12;
+}
 
 export default StyleSheet.create({
   button: {
@@ -11,13 +21,13 @@ export default StyleSheet.create({
     padding: 10,
   },
   icon: {
-    width: 14,
-    height: 14,
+    width: icon,
+    height: icon,
     resizeMode: 'contain',
   },
   title: {
     fontFamily: theme.montserratBold,
-    fontSize: 10,
+    fontSize: size,
     color: 'white',
     paddingLeft: 6,
   },

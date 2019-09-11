@@ -31,7 +31,8 @@ class Login extends Component {
             <Input type="email" placeholder="Email Address" />
             <Input type="password" placeholder="Password" />
             <TouchableOpacity
-              style={[homeStyles.formButton, styles.formBtnCustom]}>
+              style={[homeStyles.formButton, styles.formBtnCustom]}
+              onPress={() => navigate('Main')}>
               <Text style={homeStyles.formButtonTitle}>SUBMIT</Text>
             </TouchableOpacity>
             <OtherButtons type="facebook" />

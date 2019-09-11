@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text} from 'react-native';
 import styles from './styles';
-import {Header, HealedButton, ReportBox} from '../../components';
+import {Header, HealedButton, ReportBoxWrapper} from '../../components';
 
 class Main extends Component {
   constructor(props) {
@@ -46,22 +46,7 @@ class Main extends Component {
           <Text style={styles.reportTitle}>YOUR REPORT</Text>
           <HealedButton style={styles.healedBtn} />
         </View>
-        <FlatList
-          columnWrapperStyle={styles.columnFlatList}
-          contentContainerStyle={styles.contentFlatList}
-          numColumns={2}
-          data={dataBoxes}
-          renderItem={({item, i}) => {
-            return (
-              <ReportBox
-                key={`reportBox_${i}`}
-                title={item.title}
-                text={item.description}
-                type={item.type}
-              />
-            );
-          }}
-        />
+        <ReportBoxWrapper data={dataBoxes} />
       </View>
     );
   }

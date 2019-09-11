@@ -20,10 +20,4 @@ export default StyleSheet.create({
     position: 'absolute',
     right: 14,
   },
-  columnFlatList: {
-    justifyContent: 'space-between',
-  },
-  contentFlatList: {
-    paddingHorizontal: 14,
-  },
 });

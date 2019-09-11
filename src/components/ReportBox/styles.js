@@ -1,9 +1,17 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import theme from '../../lib/theme';
 
+const width = Dimensions.get('window').width;
+
+let wrapperWidth = width / 2 - 22;
+
+if (width < 375) {
+  wrapperWidth = width - 22;
+}
+
 export default StyleSheet.create({
   wrapper: {
-    width: Dimensions.get('window').width / 2 - 22,
+    width: wrapperWidth,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

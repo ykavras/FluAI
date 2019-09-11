@@ -19,3 +19,4 @@ export {default as ProfileImage} from './ProfileImage';
 export {default as Progress} from './Progress';
 export {default as HealedButton} from './HealedButton';
 export {default as ReportBox} from './ReportBox';
+export {default as ReportBoxWrapper} from './ReportBoxWrapper';
