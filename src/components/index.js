@@ -12,3 +12,4 @@ export {default as CheckButtonsPhoto} from './CheckButtonsPhoto';
 export {default as SymptomsItem} from './SymptomsItem';
 export {default as SymptomsSlider} from './SymptomsSlider';
 export {default as Header} from './Header';
+export {default as ProfileImage} from './ProfileImage';

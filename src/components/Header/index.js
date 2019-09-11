@@ -1,13 +1,12 @@
 import React from 'react';
-import {View, Text, Image, StatusBar, TouchableOpacity} from 'react-native';
+import {View, Text, Image, StatusBar} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import Logo from '../../assets/img/Logo.png';
-const imageURL =
-  'https://images.unsplash.com/photo-1541443131876-44b03de101c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60';
+import ProfileImage from '../ProfileImage';
 
 function Header(props) {
-  const {} = props;
+  const {title} = props;
   return (
     <View style={styles.wrapper}>
       <StatusBar barStyle="light-content" />
@@ -16,20 +15,15 @@ function Header(props) {
           <Image source={Logo} style={styles.logoIcon} />
           <Text style={styles.logoTitle}>FluAI</Text>
         </View>
-        <Text style={styles.title}>MY DIAGNOSE</Text>
-        <TouchableOpacity style={styles.profiles}>
-          <View style={styles.notification}>
-            <Text style={styles.notificationNumber}>8</Text>
-          </View>
-          <View style={styles.imageWrapper}>
-            <Image source={{uri: imageURL}} style={styles.image} />
-          </View>
-        </TouchableOpacity>
+        <Text style={styles.title}>{title}</Text>
+        <ProfileImage count={8} />
       </LinearGradient>
     </View>
   );
 }
 
-Header.defaultProps = {};
+Header.defaultProps = {
+  title: 'SCREEN TITLE',
+};
 
 export default Header;
