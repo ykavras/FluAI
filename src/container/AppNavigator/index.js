@@ -9,6 +9,7 @@ import {
   AnalyzingAnswer,
   Symptoms,
   SymptomsQuestion,
+  Main,
 } from '../../screens/';
 
 const StackNavigator = createStackNavigator(
@@ -22,6 +23,7 @@ const StackNavigator = createStackNavigator(
     AnalyzingAnswer,
     Symptoms,
     SymptomsQuestion,
+    Main,
   },
   {
     headerMode: 'none',
@@ -43,10 +45,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    SymptomsQuestion,
+    Main,
   },
   {
-    initialRouteName: 'SymptomsQuestion',
+    initialRouteName: 'Main',
   },
 );
 
