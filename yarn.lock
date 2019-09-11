@@ -1750,7 +1750,7 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.9.0:
+color-convert@^1.9.0, color-convert@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -1926,6 +1926,18 @@ cssstyle@^1.0.0:
   integrity sha512-GBrLZYZ4X4x6/QEoBnIrqb8B/f5l4+8me2dkom/j1Gtbxy0kBv6OGzKuAsGM75bkGwGAFkt56Iwg28S3XTZgSA==
   dependencies:
     cssom "0.3.x"
+
+d3-path@1:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/d3-path/-/d3-path-1.0.8.tgz#4a0606a794d104513ec4a8af43525f374b278719"
+  integrity sha512-J6EfUNwcMQ+aM5YPOB8ZbgAZu6wc82f/0WFxrxwV6Ll8wBwLaHLKCqQ5Imub02JriCVVdPjgI+6P3a4EWJCxAg==
+
+d3-shape@^1.2.2:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/d3-shape/-/d3-shape-1.3.5.tgz#e81aea5940f59f0a79cfccac012232a8987c6033"
+  integrity sha512-VKazVR3phgD+MUCldapHD7P9kcrvPcexeX/PkMJmkUov4JM8IxsSg1DvbYoYich9AtdTsa5nNk2++ImPiDiSxg==
+  dependencies:
+    d3-path "1"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -5283,6 +5295,15 @@ react-native-camera@^3.4.0:
   integrity sha512-EFaixLtQsd3Kjs2AnxPx4Qb1mNSlZRZBVoxXDUdWcSdCEE3CSvdeonTb3vWAT3ZlGMi1RTOggtBpI4StMtFNjw==
   dependencies:
     prop-types "^15.6.2"
+
+react-native-conical-gradient-progress@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-conical-gradient-progress/-/react-native-conical-gradient-progress-1.0.0.tgz#627be415da9ced07166aaa34af5639d967371e76"
+  integrity sha512-IusOK/qhVwGwfGSRQeMtur1F4WBuHwforQO955JcVUGX+eSy3nmuSe3BtaI11YAaw/oBk81Mby61nWJA8x9qRQ==
+  dependencies:
+    color-convert "^1.9.3"
+    d3-shape "^1.2.2"
+    lodash "^4.17.11"
 
 react-native-datepicker@^1.7.2:
   version "1.7.2"

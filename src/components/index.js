@@ -12,4 +12,8 @@ export {default as CheckButtonsPhoto} from './CheckButtonsPhoto';
 export {default as SymptomsItem} from './SymptomsItem';
 export {default as SymptomsSlider} from './SymptomsSlider';
 export {default as Header} from './Header';
+export {default as HeaderBottomLeft} from './HeaderBottomLeft';
+export {default as HeaderBottomRight} from './HeaderBottomRight';
+export {default as HeaderBottomButton} from './HeaderBottomButton';
 export {default as ProfileImage} from './ProfileImage';
+export {default as Progress} from './Progress';

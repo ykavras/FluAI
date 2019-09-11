@@ -3,14 +3,15 @@ import {ifIphoneX} from 'react-native-iphone-x-helper';
 import theme from '../../lib/theme';
 
 export default StyleSheet.create({
-  wrapper: {},
+  wrapper: {
+    borderBottomLeftRadius: 14,
+    borderBottomRightRadius: 14,
+    paddingHorizontal: 12,
+  },
   top: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderBottomLeftRadius: 14,
-    borderBottomRightRadius: 14,
-    paddingHorizontal: 12,
     paddingBottom: 10,
     ...ifIphoneX(
       {
@@ -46,5 +47,11 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     paddingHorizontal: 10,
+  },
+  bottom: {
+    paddingBottom: 20,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
   },
 });
