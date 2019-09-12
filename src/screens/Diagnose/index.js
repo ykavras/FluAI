@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, PanResponder} from 'react-native';
+import {View} from 'react-native';
 import styles from './styles';
 import {
   DiagnoseAnalysis,
@@ -30,6 +30,16 @@ class Diagnose extends Component {
         },
       ],
       toggle: true,
+      infoTextData: [
+        {
+          percent: 14,
+          text: 'Viral Phyrangitis',
+        },
+        {
+          percent: 6,
+          text: 'Common Cold',
+        },
+      ],
     };
   }
 
@@ -38,13 +48,19 @@ class Diagnose extends Component {
     this.setState({toggle: !toggle});
   };
   render() {
-    const {dataBoxes, toggle} = this.state;
+    const {dataBoxes, toggle, infoTextData} = this.state;
     return (
       <View style={styles.wrapper}>
         <Header title="MY DIAGNOSE" />
         <DiagnoseAnalysis
           toggleWrapper={toggle}
           toggle={() => this.onToggle()}
+          progressCount={19}
+          infoTextData={infoTextData}
+          onPressReAnalyze={() => alert('Re-Analyze')}
+          onPressShare={() => alert('Share')}
+          onPressTreatment={() => alert('My Treatment')}
+          onPressHealed={() => alert('I"m Healed')}
         />
         <View style={styles.dataContent}>
           <ReportBoxWrapper

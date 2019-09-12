@@ -80,6 +80,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 3.84,
     elevation: 1,
+    zIndex: 1,
   },
   infoText: {
     fontFamily: theme.montserratLight,
