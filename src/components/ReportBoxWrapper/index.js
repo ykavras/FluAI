@@ -14,12 +14,13 @@ if (width < 375) {
 }
 
 function ReportBoxWrapper(props) {
-  const {data} = props;
+  const {data, firstContent} = props;
   return (
     <FlatList
       showsVerticalScrollIndicator={false}
       columnWrapperStyle={column}
       contentContainerStyle={styles.contentFlatList}
+      ListHeaderComponent={firstContent}
       numColumns={count}
       data={data}
       renderItem={({item, i}) => {
