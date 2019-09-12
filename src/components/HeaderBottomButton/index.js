@@ -6,7 +6,11 @@ import LinearGradient from 'react-native-linear-gradient';
 function HeaderBottomButton(props) {
   const {color1, color2, title, onPress} = props;
   return (
-    <LinearGradient colors={[color1, color2]} style={styles.reButtonGradient}>
+    <LinearGradient
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      colors={[color1, color2]}
+      style={styles.reButtonGradient}>
       <TouchableOpacity style={styles.reButton} onPress={onPress}>
         <Text style={styles.reButtonTitle}>{title}</Text>
       </TouchableOpacity>

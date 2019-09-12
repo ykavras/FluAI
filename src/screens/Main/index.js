@@ -32,6 +32,7 @@ class Main extends Component {
     return (
       <View style={styles.wrapper}>
         <Header
+          title=""
           bottom
           fill={38}
           progressText="Bacterial Pharyngitis"

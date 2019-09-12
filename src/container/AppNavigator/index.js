@@ -17,6 +17,7 @@ import {
   Symptoms,
   SymptomsQuestion,
   Main,
+  Diagnose,
 } from '../../screens/';
 
 const Tabs = createBottomTabNavigator(
@@ -27,8 +28,13 @@ const Tabs = createBottomTabNavigator(
         tabBarIcon: ({focused}) => {
           return (
             <Fragment>
-              <MainIcon style={styles.buttonIcon} fill={focused ? '#2C1DEB' : '#ccccd5'}/>
-              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>Main</Text>
+              <MainIcon
+                style={styles.buttonIcon}
+                fill={focused ? '#2C1DEB' : '#ccccd5'}
+              />
+              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>
+                Main
+              </Text>
             </Fragment>
           );
         },
@@ -40,8 +46,13 @@ const Tabs = createBottomTabNavigator(
         tabBarIcon: ({focused}) => {
           return (
             <Fragment>
-              <ReportsIcon style={styles.buttonIcon} fill={focused ? '#2C1DEB' : '#ccccd5'}/>
-              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>Reports</Text>
+              <ReportsIcon
+                style={styles.buttonIcon}
+                fill={focused ? '#2C1DEB' : '#ccccd5'}
+              />
+              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>
+                Reports
+              </Text>
             </Fragment>
           );
         },
@@ -53,8 +64,13 @@ const Tabs = createBottomTabNavigator(
         tabBarIcon: ({focused}) => {
           return (
             <Fragment>
-              <NotificationIcon style={styles.buttonIcon} fill={focused ? '#2C1DEB' : '#ccccd5'}/>
-              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>Notifications</Text>
+              <NotificationIcon
+                style={styles.buttonIcon}
+                fill={focused ? '#2C1DEB' : '#ccccd5'}
+              />
+              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>
+                Notifications
+              </Text>
             </Fragment>
           );
         },
@@ -66,8 +82,13 @@ const Tabs = createBottomTabNavigator(
         tabBarIcon: ({focused}) => {
           return (
             <Fragment>
-              <SettingsIcon style={styles.buttonIcon} fill={focused ? '#2C1DEB' : '#ccccd5'}/>
-              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>Settings</Text>
+              <SettingsIcon
+                style={styles.buttonIcon}
+                fill={focused ? '#2C1DEB' : '#ccccd5'}
+              />
+              <Text style={[styles.buttonTitle, focused && styles.btnActTitle]}>
+                Settings
+              </Text>
             </Fragment>
           );
         },
@@ -134,6 +155,7 @@ const StackNavigator = createStackNavigator(
     Symptoms,
     SymptomsQuestion,
     Main,
+    Diagnose,
   },
   {
     headerMode: 'none',
@@ -155,10 +177,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    Main,
+    Diagnose,
   },
   {
-    initialRouteName: 'Main',
+    initialRouteName: 'Diagnose',
   },
 );
 
