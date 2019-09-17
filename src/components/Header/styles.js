@@ -3,6 +3,17 @@ import {ifIphoneX} from 'react-native-iphone-x-helper';
 import theme from '../../lib/theme';
 
 export default StyleSheet.create({
+  body: {
+    backgroundColor: 'transparent',
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 10,
+    elevation: 3,
+  },
   wrapper: {
     borderBottomLeftRadius: 14,
     borderBottomRightRadius: 14,

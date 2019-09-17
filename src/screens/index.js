@@ -9,3 +9,4 @@ export {default as Symptoms} from './Symptoms';
 export {default as SymptomsQuestion} from './SymptomsQuestion';
 export {default as Main} from './Main';
 export {default as Diagnose} from './Diagnose';
+export {default as Treatment} from './Treatment';

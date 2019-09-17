@@ -19,6 +19,7 @@ export default StyleSheet.create({
     height: size,
     justifyContent: 'center',
     alignItems: 'center',
+    transform: [{rotate: '180deg'}],
   },
   progressWrapperTitle: {
     position: 'absolute',
@@ -27,6 +28,7 @@ export default StyleSheet.create({
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    transform: [{rotate: '-180deg'}],
   },
   progressCount: {
     textAlign: 'center',

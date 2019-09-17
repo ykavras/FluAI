@@ -33,35 +33,37 @@ function Header(props) {
     onPress2,
   } = props;
   return (
-    <LinearGradient colors={[color1, color2]} style={styles.wrapper}>
-      <StatusBar barStyle="light-content" />
-      <View style={styles.top}>
-        <View style={styles.logo}>
-          <Image source={Logo} style={styles.logoIcon} />
-          <Text style={styles.logoTitle}>FluAI</Text>
+    <View style={styles.body}>
+      <LinearGradient colors={[color1, color2]} style={styles.wrapper}>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.top}>
+          <View style={styles.logo}>
+            <Image source={Logo} style={styles.logoIcon} />
+            <Text style={styles.logoTitle}>FluAI</Text>
+          </View>
+          <Text style={styles.title}>{title}</Text>
+          <ProfileImage count={8} />
         </View>
-        <Text style={styles.title}>{title}</Text>
-        <ProfileImage count={8} />
-      </View>
-      {bottom && (
-        <View style={styles.bottom}>
-          <HeaderBottomLeft
-            size={size}
-            width={progressWidth}
-            fill={fill}
-            text={progressText}
-            share={share}
-          />
-          <HeaderBottomRight
-            onPress1={onPress1}
-            onPress2={onPress2}
-            text={text}
-            textBold={textBold}
-            textSmall={textSmall}
-          />
-        </View>
-      )}
-    </LinearGradient>
+        {bottom && (
+          <View style={styles.bottom}>
+            <HeaderBottomLeft
+              size={size}
+              width={progressWidth}
+              fill={fill}
+              text={progressText}
+              share={share}
+            />
+            <HeaderBottomRight
+              onPress1={onPress1}
+              onPress2={onPress2}
+              text={text}
+              textBold={textBold}
+              textSmall={textSmall}
+            />
+          </View>
+        )}
+      </LinearGradient>
+    </View>
   );
 }
 
