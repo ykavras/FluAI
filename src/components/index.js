@@ -24,3 +24,5 @@ export {default as ReportBoxWrapper} from './ReportBoxWrapper';
 export {default as DiagnoseContext} from './DiagnoseContext';
 export {default as DiagnoseAnalysis} from './DiagnoseAnalysis';
 export {default as SmallTopBar} from './SmallTopBar';
+export {default as BigTextBox} from './BigTextBox';
+export {default as MediumTextBox} from './MediumTextBox';

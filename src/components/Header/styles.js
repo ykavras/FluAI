@@ -13,6 +13,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.16,
     shadowRadius: 10,
     elevation: 3,
+    zIndex: 3,
   },
   wrapper: {
     borderBottomLeftRadius: 14,

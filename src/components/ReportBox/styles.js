@@ -6,7 +6,7 @@ const width = Dimensions.get('window').width;
 let wrapperWidth = width / 2 - 22;
 
 if (width < 375) {
-  wrapperWidth = width - 22;
+  wrapperWidth = width - 28;
 }
 
 export default StyleSheet.create({
