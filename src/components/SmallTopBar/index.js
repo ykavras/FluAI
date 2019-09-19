@@ -4,12 +4,13 @@ import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import {ProgressSmall} from '../index';
 import Diagnose from '../../assets/icons/Diagnose';
+import { color } from "react-native-reanimated";
 
 function SmallTopBar(props) {
-  const {onPress} = props;
+  const {color1, color2, onPress} = props;
   return (
     <View style={styles.body}>
-      <LinearGradient style={styles.wrapper} colors={['#2B6B86', '#5B34E1']}>
+      <LinearGradient style={styles.wrapper} colors={[color1, color2]}>
         <ProgressSmall size={70} width={9} fill={80} text="Cold" />
         <TouchableOpacity style={styles.button} onPress={onPress}>
           <Diagnose style={styles.icon} />
@@ -24,6 +25,9 @@ function SmallTopBar(props) {
   );
 }
 
-SmallTopBar.defaultProps = {};
+SmallTopBar.defaultProps = {
+  color1: '#2B6B86',
+  color2: '#5B34E1',
+};
 
 export default SmallTopBar;

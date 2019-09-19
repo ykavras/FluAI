@@ -19,6 +19,7 @@ import {
   Main,
   Diagnose,
   Treatment,
+  Track
 } from '../../screens/';
 
 const Tabs = createBottomTabNavigator(
@@ -158,6 +159,7 @@ const StackNavigator = createStackNavigator(
     Main,
     Diagnose,
     Treatment,
+    Track,
   },
   {
     headerMode: 'none',
@@ -179,10 +181,10 @@ const StackNavigator = createStackNavigator(
 const RootNavigator = createSwitchNavigator(
   {
     StackNavigator,
-    Treatment,
+    Track,
   },
   {
-    initialRouteName: 'Treatment',
+    initialRouteName: 'Track',
   },
 );
 

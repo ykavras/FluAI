@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {View, ScrollView} from 'react-native';
 import styles from './styles';
 import {
-  DiagnoseContext,
   Header,
   MediumTextBox,
   ReportBox,
-  ReportBoxWrapper,
   SmallTopBar,
 } from '../../components';
 import BigTextBox from '../../components/BigTextBox';
@@ -36,11 +34,11 @@ class Treatment extends Component {
       titleColor: '#00667A',
       texts: [
         {
-          icon: homeIcon,
+          icon: waterIcon,
           text: 'Stay at home and rest (least 1 day)',
         },
         {
-          icon: waterIcon,
+          icon: homeIcon,
           text: 'Drink water at least 1 litres to avoid dehydration',
         },
       ],
