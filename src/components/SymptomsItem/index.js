@@ -48,9 +48,21 @@ const types = {
 };
 
 function SymptomsItem(props) {
-  const {type, slider, value, step, maximumValue, onValueChange} = props;
+  const {
+    type,
+    slider,
+    value,
+    step,
+    maximumValue,
+    onValueChange,
+    style,
+    styleProgress,
+    trackColor,
+    thumbColor,
+    tintColor,
+  } = props;
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, style]}>
       <View style={styles.context}>
         <Image source={types[type].image} style={styles.image} />
         <View>
@@ -63,13 +75,16 @@ function SymptomsItem(props) {
         </View>
       </View>
       {slider && (
-        <View style={styles.progress}>
+        <View style={[styles.progress, styleProgress]}>
           <SymptomsSlider
             slider={slider}
             onValueChange={onValueChange}
             value={value}
             step={step}
             maximumValue={maximumValue}
+            trackColor={trackColor}
+            thumbColor={thumbColor}
+            tintColor={tintColor}
           />
         </View>
       )}
@@ -80,6 +95,9 @@ function SymptomsItem(props) {
 SymptomsItem.defaultProps = {
   type: 'FEVER',
   slider: false,
+  trackColor: '#EFEFEF',
+  thumbColor: '#5F5BDB',
+  tintColor: '#5F5BDB',
 };
 
 export default SymptomsItem;

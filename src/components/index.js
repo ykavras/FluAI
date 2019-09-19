@@ -27,3 +27,4 @@ export {default as SmallTopBar} from './SmallTopBar';
 export {default as BigTextBox} from './BigTextBox';
 export {default as MediumTextBox} from './MediumTextBox';
 export {default as AnalysisToday} from './AnalysisToday';
+export {default as YourSymptoms} from './YourSymptoms';

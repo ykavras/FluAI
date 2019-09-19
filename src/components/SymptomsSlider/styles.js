@@ -15,11 +15,9 @@ export default StyleSheet.create({
     flex: 1,
   },
   trackStyle: {
-    backgroundColor: '#5F5BDB',
     borderRadius: 10,
   },
   thumbStyle: {
-    backgroundColor: '#5F5BDB',
     borderWidth: 4,
     borderColor: 'white',
   },
