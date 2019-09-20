@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import {SymptomsItem} from '../index';
+import LinearGradient from 'react-native-linear-gradient';
 
 function YourSymptoms(props) {
-  const {data, maximumValue, onValueChange} = props;
+  const {data, renderItems, okPress} = props;
   return (
     <View style={styles.wrapper}>
       <View style={styles.wrapperIn}>
@@ -13,25 +13,16 @@ function YourSymptoms(props) {
           <Text style={styles.smallText}>Last Rate : Today 14:20</Text>
         </View>
         <View style={styles.data}>
-          <FlatList
-            data={data}
-            renderItem={({item, i}) => {
-              return (
-                <SymptomsItem
-                  key={`item_${i}`}
-                  type={item.type}
-                  slider={item.slider}
-                  step={item.step}
-                  maximumValue={maximumValue}
-                  onValueChange={onValueChange}
-                  value={item.value}
-                  trackColor="#EFEFEF"
-                  thumbColor="#535353"
-                  tintColor="#535353"
-                />
-              );
-            }}
-          />
+          <FlatList data={data} renderItem={renderItems} />
+          <LinearGradient
+            style={styles.okButtonWrapper}
+            colors={['#01A733', '#15CC21']}
+            start={[0, 1]}
+            end={[1, 0]}>
+            <TouchableOpacity style={styles.okButton} onPress={okPress}>
+              <Text style={styles.okButtonTitle}>OK !</Text>
+            </TouchableOpacity>
+          </LinearGradient>
         </View>
       </View>
     </View>

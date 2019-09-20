@@ -4,7 +4,6 @@ import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import {ProgressSmall} from '../index';
 import Diagnose from '../../assets/icons/Diagnose';
-import { color } from "react-native-reanimated";
 
 function SmallTopBar(props) {
   const {color1, color2, onPress} = props;

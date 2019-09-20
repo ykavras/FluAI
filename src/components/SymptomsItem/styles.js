@@ -31,11 +31,12 @@ export default StyleSheet.create({
     height: image,
     resizeMode: 'contain',
     marginRight: 10,
+    backgroundColor: 'rgba(212,212,212,0.3)',
+    borderRadius: 50,
   },
   title: {
     fontFamily: theme.montserratMedium,
     fontSize: title,
-    color: 'white',
   },
   titleBold: {
     fontFamily: theme.montserratBold,
@@ -43,7 +44,6 @@ export default StyleSheet.create({
   text: {
     fontFamily: theme.montserratLight,
     fontSize: 10,
-    color: 'white',
     paddingTop: 6,
     width: 100,
   },

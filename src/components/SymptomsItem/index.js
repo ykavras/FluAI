@@ -50,6 +50,7 @@ const types = {
 function SymptomsItem(props) {
   const {
     type,
+    color,
     slider,
     value,
     step,
@@ -66,11 +67,11 @@ function SymptomsItem(props) {
       <View style={styles.context}>
         <Image source={types[type].image} style={styles.image} />
         <View>
-          <Text style={[styles.title, slider && styles.titleBold]}>
+          <Text style={[styles.title, slider && styles.titleBold, {color}]}>
             {types[type].title}
           </Text>
           {types[type].text && (
-            <Text style={styles.text}>{types[type].text}</Text>
+            <Text style={[styles.text, {color}]}>{types[type].text}</Text>
           )}
         </View>
       </View>
@@ -95,6 +96,7 @@ function SymptomsItem(props) {
 SymptomsItem.defaultProps = {
   type: 'FEVER',
   slider: false,
+  color: '#FFFFFF',
   trackColor: '#EFEFEF',
   thumbColor: '#5F5BDB',
   tintColor: '#5F5BDB',

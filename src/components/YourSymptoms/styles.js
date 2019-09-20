@@ -12,7 +12,7 @@ export default StyleSheet.create({
     elevation: 4,
     justifyContent: 'center',
     padding: 14,
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
   wrapperIn: {
     backgroundColor: '#FFFFFF',
@@ -57,5 +57,23 @@ export default StyleSheet.create({
     elevation: 5,
     borderRadius: 20,
   },
-	data:{},
+  data: {},
+  okButtonWrapper: {
+    width: 140,
+    height: 34,
+    borderRadius: 16,
+    alignSelf: 'center',
+    marginTop: 30,
+    marginBottom: 15,
+  },
+  okButton: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  okButtonTitle: {
+    fontFamily: theme.montserratBold,
+    fontSize: 10,
+    color: '#FFFFFF',
+  },
 });

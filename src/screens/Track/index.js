@@ -6,6 +6,7 @@ import {
   Header,
   ReportBox,
   SmallTopBar,
+  SymptomsItem,
   YourSymptoms,
 } from '../../components';
 
@@ -65,6 +66,7 @@ class Track extends Component {
         maximumValue: 10,
       },
     ],
+    yourSymptoms: false,
   };
 
   onChangeValue = (type, val) => {
@@ -74,8 +76,13 @@ class Track extends Component {
     );
     this.setState({data: newData});
   };
+
+  openYourSymptoms = () => {
+    this.setState({yourSymptoms: !this.state.yourSymptoms});
+  };
+
   render() {
-    const {dataBoxes, data} = this.state;
+    const {dataBoxes, data, yourSymptoms} = this.state;
     return (
       <View style={styles.wrapper}>
         <Header title="TRACK" color1="#005873" color2="#00459F" />
@@ -84,14 +91,33 @@ class Track extends Component {
           color2="#3485E1"
           onPress={() => alert('My Diagnose')}
         />
-        <YourSymptoms
-          data={data}
-          onValueChange={val => this.onChangeValue(item.type, val)}
-        />
+        {yourSymptoms && (
+          <YourSymptoms
+            data={data}
+            okPress={() => this.openYourSymptoms()}
+            renderItems={({item, i}) => {
+              return (
+                <SymptomsItem
+                  color="#545454"
+                  key={`item_${i}`}
+                  type={item.type}
+                  slider={item.slider}
+                  step={item.step}
+                  maximumValue={item.maximumValue}
+                  onValueChange={val => this.onChangeValue(item.type, val)}
+                  value={item.value}
+                  trackColor="#EFEFEF"
+                  thumbColor="#535353"
+                  tintColor="#535353"
+                />
+              );
+            }}
+          />
+        )}
         <ScrollView
           contentContainerStyle={styles.context}
           showsVerticalScrollIndicator={false}>
-          <AnalysisToday />
+          <AnalysisToday todayPress={() => this.openYourSymptoms()} />
           <View style={styles.reportWrapper}>
             {dataBoxes.map((item, i) => {
               return (
