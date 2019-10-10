@@ -11,3 +11,4 @@ export {default as Main} from './Main';
 export {default as Diagnose} from './Diagnose';
 export {default as Treatment} from './Treatment';
 export {default as Track} from './Track';
+export {default as Test} from './Test';

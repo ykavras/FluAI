@@ -186,6 +186,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 3,
     elevation: 3,
+    zIndex: 3,
   },
   toggleBtnLine: {
     width: 40,

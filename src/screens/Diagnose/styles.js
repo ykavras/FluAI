@@ -7,5 +7,6 @@ export default StyleSheet.create({
   },
   dataContent: {
     flex: 1,
+    zIndex: 1,
   },
 });
